@@ -1,4 +1,5 @@
 require 'sinatra'
+require 'sinatra/reloader'
 require 'redcarpet'
 require 'yaml'
 require 'time'

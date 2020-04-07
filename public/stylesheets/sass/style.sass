@@ -26,6 +26,8 @@ $hamburger-half: ($hamburger-height - $hamburger-line) / 2
     font-family: Consolas,"Liberation Mono",Menlo,Courier,monospace
 =noto-sans
     font-family: 'Noto Sans JP', sans-serif
+=sans
+    font-family: "Hiragino Sans W3", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif
 
 // ===== 全体 =====
 
@@ -33,7 +35,7 @@ html
     font-size: 62.5%
 
 body
-    font-family: "Hiragino Sans W3", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif
+    +sans
     font-weight: 200
     font-size: $body-f-size
     letter-spacing: 0.03em
@@ -98,7 +100,7 @@ li
     width: 250px
     top: 0
     left: -250px
-    z-index: 1
+    z-index: 2
     padding: 2rem
     transition: .5s
     ul
@@ -162,6 +164,7 @@ li
         color: rgba(0,0,0,0.5)
     pre
         margin-top: 0
+        // clear: left
     p > code
         +mono
         background-color: #f7f7f7
@@ -204,19 +207,26 @@ li
         content: '目次'
         color: #aaa
 .code-label
+    line-height: 1.2
     display: inline-block
     margin: 0
-    padding: 0.2rem 1rem
+    padding: 0.5rem 1rem
     font-size: 1.4rem
     background-color: #ededed
-    border-radius: .2rem .2rem 0 0
+    position: relative
+    top: 0
+    z-index: 1
+.code-label + pre
+    margin-top: -2.8rem
 .hljs
     background-color: #f7f7f7
     +mono
     border-radius: 0 .2rem .2rem .2rem
     line-height: 1.2
     padding: $body-f-size
+    padding-top: 3.5rem
     letter-spacing: 0
+    position: relative
 .add
     position: relative
     &::before
@@ -224,6 +234,25 @@ li
         position: absolute
         left: -1.2rem
         color: #DD004B
+
+$code-label: ("shell": "terminal")
+
+@each $label, $lang in $code-label
+    .#{$label}::before
+        content: $lang
+        +sans
+        position: absolute
+        top: 0
+        left: 0
+        display: inline-block
+        background-color: #ededed
+        color: $text-color
+        padding: 0.5rem 1rem
+        font-size: 1.4rem
+        letter-spacing: .1rem
+
+// .shell::before
+//     content: 'terminal'
 
 =btn($color,$border)
     +radius
