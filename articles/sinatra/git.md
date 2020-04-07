@@ -3,8 +3,10 @@ title_ja: gitを使う
 date: 2020-04-07
 ---
 参考：[Getting Started - First-Time Git Setup](https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup)
+[デプロイ！](https://tutorial.djangogirls.org/ja/deploy/)
 
-gitをインストールする
+## gitをインストールする
+[Git](https://git-scm.com/)
 
 ## そのOSで初めてgitを使うとき
 自分のユーザ名とメールアドレスを設定する
@@ -70,4 +72,14 @@ $ git add -A
 
 ``` shell
 $ git status
+```
+追跡しているファイルが緑色で表示される。
+
+## はじめてのコミット
+``` shell
+$ git commit -m "My first commit"
+```
+
+``` shell
+$ git commit -m "どこをどう変更したのか"
 ```
