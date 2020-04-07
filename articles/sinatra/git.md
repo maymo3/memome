@@ -1,12 +1,13 @@
 ---
 title_ja: gitを使う
-date: 2020-04-07
+date: 2020-03-29
 ---
 参考：[Getting Started - First-Time Git Setup](https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup)
 [デプロイ！](https://tutorial.djangogirls.org/ja/deploy/)
 
 ## gitをインストールする
-[Git](https://git-scm.com/)
+gitをダウンロードする
+公式サイト：[https://git-scm.com](https://git-scm.com/)
 
 ## そのOSで初めてgitを使うとき
 自分のユーザ名とメールアドレスを設定する
@@ -22,7 +23,7 @@ $ git config --global user.email youremail@address.com
 $ git config --list --show-origin
 ```
 
-## プロジェクトディレクトリでgitを有効にする
+## gitを有効にする
 プロジェクトディレクトリに移動する
 
 ``` shell
@@ -58,10 +59,11 @@ vendor/
 ```
 
 ## ファイルの状態を確認する
+
 ``` shell
 $ git status
 ```
-未追跡のファイルが赤色で表示される。
+未追跡(変更を記録することにしていない)ファイルが赤色で表示される。
 
 ## 新しいファイルの追跡を開始する
 
@@ -76,6 +78,7 @@ $ git status
 追跡しているファイルが緑色で表示される。
 
 ## はじめてのコミット
+
 ``` shell
 $ git commit -m "My first commit"
 ```

@@ -18,7 +18,9 @@ config.ruを作る
 <span></span>
 
 ## クラシックスタイルの場合
+
 <p class="code-label">app.rb</p>
+
 ```ruby
 require 'sinatra'
 
@@ -27,13 +29,16 @@ get '/' do
 end
 ```
 <p class="code-label">config.ru</p>
+
 ```ruby
 require './app'
 run Sinatra::Application
 ```
 
 ## モジュラースタイルの場合
+
 <p class="code-label">app.rb</p>
+
 ```ruby
 require 'sinatra/base'
 
@@ -43,19 +48,23 @@ class MyApp < Sinatra::Base
     end
 end
 ```
+
 <p class="code-label">config.ru</p>
+
 ```ruby
 require './app'
 run MyApp
 ```
 
 ## サーバの起動
+
 ```shell
 $ rackup -p 4567
 ```
 -pオプション…ポートの指定
 
 bundler + rackでサーバを起動
+
 ```shell
 $ bundle exec rackup -p 4567
 ```

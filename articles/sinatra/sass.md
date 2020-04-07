@@ -14,6 +14,8 @@ $ gem install sass
 ```
 bundlerを使用している場合は、
 
+<p class="code-label">Gemfile</p>
+
 ``` ruby
 gem 'sass'
 ```
@@ -24,7 +26,8 @@ $ bundle install
 ```
 
 ## config.ruに設定を書く
-config.ruに追記
+
+<p class="code-label">config.ru</p>
 
 ```ruby
 require 'sass/plugin/rack'

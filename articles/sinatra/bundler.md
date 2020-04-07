@@ -5,14 +5,11 @@ date: 2020/03/25
 
 ## bundlerをインストールする
 
-<p class="code-label">Terminal</p>
 ```shell
 $ sudo gem install bundler --no-doc
 ```
 
 プロジェクトディレクトリでbundlerを使うことを表明する
-
-<p class="code-label">Terminal</p>
 
 ```shell
 $ bundle init
@@ -51,15 +48,11 @@ git_source(:github) {|repo_name| "https://github.com/#{repo_name}" }
 
 gemのインストール場所を設定する
 
-<p class="code-label">Terminal</p>
-
 ``` shell
 $ bundle config set path 'vendor/bundle'
 ```
 
 gemをインストールする
-
-<p class="code-label">Terminal</p>
 
 ```shell
 $ bundle install
@@ -80,8 +73,6 @@ $ bundle install
 
 ## bundlerを使ってサーバを起動する
 ※ipアドレスは一例
-
-<p class="code-label">Terminal</p>
 
 ```shell
 $ bundle exec rackup -o 192.168.33.10

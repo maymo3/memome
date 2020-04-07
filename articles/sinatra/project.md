@@ -22,11 +22,9 @@ $ touch main.rb
 ホストを指定してサーバを起動する
 ※ipアドレスは一例
 
-<p class="code-label">terminal</p>
 ``` shell
 $ ruby main.rb -o 192.168.33.10
 ```
-<p class="code-label">terminal</p>
 ``` shell
 $ mkdir views
 $ touch views/example.slim
