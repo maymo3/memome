@@ -121,8 +121,7 @@ webアプリを起動するコマンドには`web:`というプロセスタイ�
 ```shell
 $ heroku create kokoni-app-name
 ```
-アプリ名はアクセスするときのURL`https://kokoni-app-name.herokuapp.com`
-のように入る。
+アプリ名はアクセスするときのURL`https://kokoni-app-name.herokuapp.com`のように入る。
 アプリ名が他と被ると
 
 ``` shell
