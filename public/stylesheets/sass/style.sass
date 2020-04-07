@@ -1,8 +1,8 @@
 // ===== 変数 =====
 $back-color: #fafafa
 $text-color: #333
-$primary-color: #63b8a7
-$secondary-color: rgba(99, 184, 167, 0.5)
+$primary-color: #888
+$secondary-color: #aaa
 $body-f-size: 1.6rem
 $hamburger-line: 0.3rem
 $hamburger-width: 3rem
@@ -52,8 +52,6 @@ a:link, a:visited // , a:hover, a:active
 a:hover, a:active
     text-decoration: underline
 
-// h1,h2,h3,h4
-//     font-weight: normal
 h1,h2,h3
     +noto-sans
 
@@ -72,7 +70,7 @@ li
 .header
     h1
         text-align: center
-        color: #aaa
+        color: $secondary-color
 .categories
     +flex
 .cate-name
@@ -89,8 +87,8 @@ li
         margin-right: 1rem
         transition: .15s
         &:hover
-            box-shadow: 0 0 0 1px #888
-            color: #888
+            box-shadow: 0 0 0 1px $primary-color
+            color: $primary-color
 
 // ===== サイドバー =====
 .side
@@ -106,7 +104,6 @@ li
     ul
         margin: 0
     li
-        // border-bottom: 1px solid rgba(0,0,0,0.5)
         padding: 0 0 1rem 0
     a
         display: block
@@ -148,7 +145,7 @@ li
     transform: translate(0, -$hamburger-half) rotate(45deg)
 .pao
     +noto-sans
-    color: #888
+    color: $primary-color
     font-weight: normal
     line-height: 1
     margin: 2.4rem 0
@@ -164,7 +161,6 @@ li
         color: rgba(0,0,0,0.5)
     pre
         margin-top: 0
-        // clear: left
     p > code
         +mono
         background-color: #f7f7f7
@@ -204,7 +200,7 @@ li
         +radius
         margin: 0
         display: inline-block
-        border: 1px solid #aaa
+        border: 1px solid $secondary-color
         padding: $body-f-size
         width: 100%
     li
@@ -216,7 +212,7 @@ li
         font-size: 1.4rem
     ul:first-child::before
         content: '目次'
-        color: #aaa
+        color: $secondary-color
 .code-label
     line-height: 1.2
     display: inline-block
@@ -262,14 +258,10 @@ $code-label: ("shell": "terminal")
         font-size: 1.4rem
         letter-spacing: .1rem
 
-// .shell::before
-//     content: 'terminal'
-
 =btn($color,$border)
     +radius
     text-align: center
     color: $color
-    // font-size: 2rem
     border: 1px solid $border
     height: 100%
     padding: 1rem 0
@@ -281,26 +273,21 @@ $code-label: ("shell": "terminal")
 .nexts,.prevs
     width: 49%
     a
-        +btn(#888,#b2b2b2)
+        +btn($primary-color,#b2b2b2)
         display: inline-block
         width: 100%
         height: 100%
-        // opacity: 0.9
         transition: 0.15s
         &:hover
             opacity: 1
             color: #fff
             background-color: #b2b2b2
             opacity: 0.7
-            // border: none
     p
         +btn(#ededed,#ededed)
         margin: 0
     i
         font-size: 2rem
-
-
-
 
 // tree
 =tree-line($w,$h,$t)
@@ -362,10 +349,7 @@ $icon-color: ("folder-open": #007bff,"gem": #DD004B,"file": #8b8b8b,"sass": #ff0
         position: sticky
         height: 100vh
         padding: 0
-        // left: 0
-        ul
-            // position: sticky
-            // top: 2rem
+
     .toggle-btn
         display: none
     .left-back
