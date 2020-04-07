@@ -191,7 +191,7 @@ li
 
 .toc
     margin: $body-f-size 0
-    ul
+    > ul
         +radius
         margin: 0
         display: inline-block
@@ -201,8 +201,10 @@ li
     li
         list-style: none
         margin-left: 2rem
+        line-height: 1.5
     a
         color: rgba(0,0,0,0.65)
+        font-size: 1.4rem
     ul:first-child::before
         content: '目次'
         color: #aaa
