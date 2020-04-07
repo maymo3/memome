@@ -2,7 +2,11 @@
 title_ja: Herokuを使う
 date: 2020/03/31
 ---
-## Herokuの会員登録をする
+## はじめに
+プロジェクトはgitで管理する必要がある
+参照：[gitを使う](git)
+
+Herokuの会員登録をする
 日本語ページ：[https://signup.heroku.com/jp](https://signup.heroku.com/jp)
 
 ## Heroku CLIのインストール
@@ -87,6 +91,8 @@ gem 'sass'
 ```
 
 ## Procfileを作る
+参考：[Preparing a Codebase for Heroku Deployment](https://devcenter.heroku.com/articles/preparing-a-codebase-for-heroku-deployment)
+
 ローカル開発時に手動で打っていたアプリを起動するコマンドを、Herokuに自動で実行してもらえるようにする。
 
 プロジェクトディレクトリ直下に`Procfile`という名前のテキストファイルを作る
@@ -95,7 +101,7 @@ gem 'sass'
     <li><i class="fas fa-folder-open fa-fw"></i>MyProject
         <ul>
             <li><i class="fas fa-gem fa-fw"></i>app.rb</li>
-            <li class="marked"><i class="far fa-file fa-fw"></i>Procfile</li>
+            <li><div class="marked"><i class="far fa-file fa-fw"></i>Procfile</div></li>
             <li><i class="fas fa-gem fa-fw"></i>config.ru</li>
         </ul>
     </li>
@@ -107,7 +113,7 @@ gem 'sass'
 web: bundle exec ruby app.rb -p $PORT
 ```
 `rackup`ではなくアプリを直接起動する`ruby app.rb`のように書く。
-
+webアプリを起動するコマンドには`web:`というプロセスタイプを付ける。
 
 ## Heroku上にアプリを作る
 プロジェクトディレクトリで`heroku create アプリ名`する。
@@ -115,8 +121,7 @@ web: bundle exec ruby app.rb -p $PORT
 ```shell
 $ heroku create kokoni-app-name
 ```
-アプリ名はアクセスするときのURLに
-`https://kokoni-app-name.herokuapp.com`
+アプリ名はアクセスするときのURL`https://kokoni-app-name.herokuapp.com`
 のように入る。
 アプリ名が他と被ると
 
@@ -125,3 +130,9 @@ Name kokoni-app-name is already taken
 ```
 みたいに怒られるので使用可能なアプリ名で再度実行する。
 アプリ名を省略すると適当な名前が自動で割り振られる。
+
+## Herokuにプロジェクトの内容を送信する
+
+``` shell
+$ git push heroku master
+```
