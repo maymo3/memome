@@ -75,5 +75,5 @@ $ bundle install
 ※ipアドレスは一例
 
 ```shell
-$ bundle exec rackup -o 192.168.33.10
+$ bundle exec ruby app.rb -o 192.168.33.10
 ```

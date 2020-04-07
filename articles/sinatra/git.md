@@ -45,7 +45,7 @@ $ git init
 <ul class="tree">
     <li><i class="fas fa-folder-open fa-fw"></i>MyProject
         <ul>
-            <li><i class="fas fa-file fa-fw"></i>.gitignore</li>
+            <li><i class="far fa-file fa-fw"></i>.gitignore</li>
         </ul>
     </li>
 </ul>
