@@ -21,7 +21,7 @@ class Post
 
     def self.category_posts(category_name)
         # Postクラスのインスタンスを配列に入れて返す
-        root = File.expand_path('../../',__FILE__)
+        root = File.expand_path('../',__FILE__)
         category_posts = Dir.glob("#{root}/articles/#{category_name}/*.md").map do |file|
             # create_post(file)
             _, meta, content = File.read(file).split("---\n", 3)
@@ -53,11 +53,9 @@ class Post
     end
 end
 
-# post = Post.category_posts('sinatra')[0]
+root = File.expand_path('../',__FILE__)
 
-# puts post.title_ja
-# puts post.next_article&.title_ja
-categories = Dir.children("./articles")
+categories = Dir.children("#{root}/articles")
 
 categories.each do |category_name|
 # Post.categories.each do |category_name|
@@ -84,6 +82,4 @@ get '/' do
     slim :index, :locals => {:categories => categories,:current_article => nil}
 end
 
-# "title: sass-each\ntitle_ja: eachを使う\ndate: 2020-03-30\n"
-# "\n@eachを使って、マップ内のすべてのキーと値のペアを繰り返し処理する\n\n```sass\n$icon-color: (\"folder-open\": #007bff,\"gem\": #DD004B,\"file\": #8b8b8b)\n\n@each $icon, $color in $icon-color\n    .fa-\#{$icon}\n        color: $color\n```\n"
 
