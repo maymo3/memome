@@ -1,9 +1,7 @@
 # require 'sinatra/base'
-require 'sinatra'
-require 'sinatra/reloader'
-require './lib/app'
+# require 'sinatra/reloader'
+require './app'
 require 'sass/plugin/rack'
-require 'redcarpet'
 
 # Dir[File.dirname(__FILE__) + '/helpers/*.rb'].each { |f| require f }
 

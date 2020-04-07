@@ -1,4 +1,5 @@
-# 各記事
+require 'sinatra'
+require 'redcarpet'
 require 'yaml'
 require 'time'
 require './helpers/markdown'
