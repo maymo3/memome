@@ -1,0 +1,10 @@
+.left-back
+.container
+    .contents
+        aside.side
+            ul.list-unstyled
+                - current_category.each do |article|
+                    li
+                        a.text-dark.font-weight-light href="#{article.title}" = article.title_ja
+        main.main
+                    / .container.p-3

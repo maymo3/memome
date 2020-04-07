@@ -1,0 +1,7 @@
+header.header
+    h1 memome
+.container
+    .categories
+        - categories.each do |category|
+            .cate-name
+                a href="#{category}" = category

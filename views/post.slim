@@ -1,0 +1,24 @@
+article.article
+    header
+        h1 = current_article.title_ja
+        time.timeago datetime="#{current_article.cleated_at.xmlschema}" = current_article.cleated_at.strftime "%Y-%m-%d"
+    section
+        .toc
+            == toc(current_article.body)
+        == markdown(current_article.body)
+    .next-prev
+        .prevs
+            - if prev_article
+                a href="#{prev_article.title}"
+                    i.fas.fa-chevron-left
+            - else
+                p
+                    i.fas.fa-chevron-left
+        .nexts
+            - if next_article
+                a href="#{next_article.title}"
+                    i.fas.fa-chevron-right
+            - else
+                p
+                    i.fas.fa-chevron-right
+        
